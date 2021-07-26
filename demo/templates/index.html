@@ -10,7 +10,8 @@
 
 <body>
   <h1>Input text</h1>
-  <form action="/counter" method="GET">
+  <form action="/counter" method="POST">
+    {% csrf_token %}
     <textarea name="text" id="" cols="100" rows="25"></textarea><br />
     <input type="submit" value="Send text">
   </form>

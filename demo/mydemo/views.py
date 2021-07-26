@@ -5,11 +5,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-
     return render(request, 'index.html')
 
 
 def counter(request):
-    words = request.GET['text']
+    words = request.POST['text']
     counter = len(words.split())
     return render(request, 'counter.html', {'counter': counter})
